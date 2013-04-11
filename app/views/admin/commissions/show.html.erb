@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @commission.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @commission.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_commission_path(@commission), :class => 'btn' %>
+<%= link_to 'Back', admin_commissions_path, :class => 'btn' %>

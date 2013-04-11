@@ -1,0 +1,23 @@
+<h1>Comisiones</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Nombre</th>
+    <th>Miembros</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @commissions.each do |commission| %>
+  <tr>
+    <td><%= link_to commission.name, admin_commission_path(commission) %></td>
+    <td><%= commission.members.count %></td>
+    <td><%= link_to 'Edit', edit_admin_commission_path(commission), :class => "btn btn-small" %></td>
+    <td><%= link_to 'Destroy', [:admin, commission], method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva comisión', new_admin_commission_path, :class => "btn btn-primary" %>

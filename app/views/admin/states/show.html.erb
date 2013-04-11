@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @state.name %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @state.code %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @state.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @state.longitude %>
+</p>
+
+<p>
+  <b>Zoom:</b>
+  <%= @state.zoom %>
+</p>
+
+<p>
+  <b>Space:</b>
+  <%= @state.space %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_state_path(@state), :class => 'btn' %>
+<%= link_to 'Back', admin_states_path, :class => 'btn' %>

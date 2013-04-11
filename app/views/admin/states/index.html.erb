@@ -1,0 +1,29 @@
+<h1>Listing states</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Zoom</th>
+    <th>Space</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @states.each do |state| %>
+  <tr>
+    <td><%= link_to state.name, admin_state_path(state) %></td>
+    <td><%= state.code %></td>
+    <td><%= state.latitude %></td>
+    <td><%= state.longitude %></td>
+    <td><%= state.zoom %></td>
+    <td><%= state.space %></td>
+    <td><%= link_to 'Edit', edit_admin_state_path(state), :class => "btn btn-small" %></td>
+    <td><%= link_to 'Destroy', [:admin, state], method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New State', new_admin_state_path, :class => "btn btn-primary" %>

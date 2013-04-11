@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  branch: MyString
+  municipality_id: 1
+  street: MyString
+  district: MyString
+  zipcode: MyString
+  latitude: 9.99
+  longitude: 9.99
+  bank_id: 1
+
+two:
+  branch: MyString
+  municipality_id: 1
+  street: MyString
+  district: MyString
+  zipcode: MyString
+  latitude: 9.99
+  longitude: 9.99
+  bank_id: 1

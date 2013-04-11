@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Distrito:</b>
+  <%= @member.district %>
+</p>
+
+<p>
+  <b>Cabecera:</b>
+  <%= @member.header %>
+</p>
+
+<p>
+  <b>Entidad:</b>
+  <%= @member.state.name %>
+</p>
+
+<p>
+  <b>Partido:</b>
+  <%= @member.party %>
+</p>
+
+<p>
+  <b>Correo:</b>
+  <%= @member.email %>
+</p>
+
+<p>
+  <b>Suplente:</b>
+  <%= @member.substitute %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @member.image %>
+</p>
+
+<p>
+  <b>Telefonos:</b>
+  <%= @member.phones %>
+</p>
+
+<p>
+  <b>Curul:</b>
+  <%= @member.curul %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= (@member.kind == 1) ? "Diputado" : "Senador" %>
+</p>
+
+<%= link_to 'Edit', edit_admin_member_path(@member), :class => 'btn' %>
+<%= link_to 'Back', admin_members_path, :class => 'btn' %>

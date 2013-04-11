@@ -1,0 +1,35 @@
+<h1>Legisladores</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Nombre</th>
+    <th>Distrito</th>
+    <th>Cabecera</th>
+    <th>Entidad</th>
+    <th>Partido</th>
+    <th>Correo</th>
+    <th>Curul</th>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= link_to member.name, admin_member_path(member) %></td>
+    <td><%= member.district %></td>
+    <td><%= member.header %></td>
+    <td><%= member.state.name %></td>
+    <td><%= member.party %></td>
+    <td><%= member.email %></td>
+    <td><%= member.curul %></td>
+    <td><%= (member.kind == 1) ? "Diputado" : "Senador" %></td>
+    <td><%= link_to 'Edit', edit_admin_member_path(member), :class => "btn btn-small" %></td>
+    <td><%= link_to 'Destroy', [:admin, member], method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= paginate @members %>
+
+<%= link_to 'New Atm', new_admin_member_path, :class => "btn btn-primary" %>
